@@ -9,7 +9,7 @@ import Cocoa
 import AVKit
 
 class AnimatedDesktop: NSObject {
-  var window: NSWindow?
+  var window: DesktopWindow?
   let playerView: AVPlayerView = AVPlayerView()
   var player: AVPlayer?
   var path: String?
@@ -21,27 +21,17 @@ class AnimatedDesktop: NSObject {
   
   func run() -> Void {
     if window != nil { return }
-    let styleMask: NSWindow.StyleMask = [.titled, .resizable, .closable, .fullScreen]
-    
-    window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 1920, height: 1080), styleMask: styleMask, backing: .buffered, defer: false)
-    
+
     let file = URL(fileURLWithPath: path!)
     player = AVPlayer(url: file)
-    window?.title = ""
-    window?.ignoresMouseEvents = true
-    
-    window?.level = NSWindow.Level(rawValue: Int32.kCGDesktopIconWindowLevel.into())
+    window = DesktopWindow()
 
-    window?.center()
-    window?.setFrame(window!.screen!.frame, display: true)
-    window?.makeKeyAndOrderFront(nil)
-    
     playerView.controlsStyle = .none
     playerView.videoGravity = .resizeAspectFill
     playerView.player = player
     player?.isMuted = true
-    
     player?.play()
+    
     window?.contentView = playerView
     
     NotificationCenter.default.addObserver(self, selector: #selector(loop), name: .AVPlayerItemDidPlayToEndTime, object: nil)

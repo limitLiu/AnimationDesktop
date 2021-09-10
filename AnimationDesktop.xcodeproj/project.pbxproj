@@ -12,6 +12,7 @@
 		044BD76726E8E61D0004E92E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044BD76526E8E61D0004E92E /* Main.storyboard */; };
 		044BD7AF26E91DF70004E92E /* AnimatedDesktop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044BD7AE26E91DF70004E92E /* AnimatedDesktop.swift */; };
 		044BD7BC26E9232B0004E92E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044BD7BB26E9232B0004E92E /* Utils.swift */; };
+		0455E5AC26EBBC51002DB73B /* DesktopWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0455E5AB26EBBC51002DB73B /* DesktopWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		044BD76926E8E61D0004E92E /* AnimationDesktop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnimationDesktop.entitlements; sourceTree = "<group>"; };
 		044BD7AE26E91DF70004E92E /* AnimatedDesktop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedDesktop.swift; sourceTree = "<group>"; };
 		044BD7BB26E9232B0004E92E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		0455E5AB26EBBC51002DB73B /* DesktopWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			children = (
 				044BD7AE26E91DF70004E92E /* AnimatedDesktop.swift */,
 				044BD7BB26E9232B0004E92E /* Utils.swift */,
+				0455E5AB26EBBC51002DB73B /* DesktopWindow.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0455E5AC26EBBC51002DB73B /* DesktopWindow.swift in Sources */,
 				044BD7AF26E91DF70004E92E /* AnimatedDesktop.swift in Sources */,
 				044BD76026E8E61C0004E92E /* AppDelegate.swift in Sources */,
 				044BD7BC26E9232B0004E92E /* Utils.swift in Sources */,
