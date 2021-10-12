@@ -13,6 +13,7 @@
 		044BD7AF26E91DF70004E92E /* AnimatedDesktop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044BD7AE26E91DF70004E92E /* AnimatedDesktop.swift */; };
 		044BD7BC26E9232B0004E92E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044BD7BB26E9232B0004E92E /* Utils.swift */; };
 		0455E5AC26EBBC51002DB73B /* DesktopWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0455E5AB26EBBC51002DB73B /* DesktopWindow.swift */; };
+		9AC5C0BEBC641EC554EA51E6 /* Pods_AnimationDesktop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CDA7D0398803E63F80A318 /* Pods_AnimationDesktop.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,9 @@
 		044BD7AE26E91DF70004E92E /* AnimatedDesktop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedDesktop.swift; sourceTree = "<group>"; };
 		044BD7BB26E9232B0004E92E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		0455E5AB26EBBC51002DB73B /* DesktopWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopWindow.swift; sourceTree = "<group>"; };
+		89CDA7D0398803E63F80A318 /* Pods_AnimationDesktop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationDesktop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8341C43CA7F45ACA079F374 /* Pods-AnimationDesktop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationDesktop.debug.xcconfig"; path = "Target Support Files/Pods-AnimationDesktop/Pods-AnimationDesktop.debug.xcconfig"; sourceTree = "<group>"; };
+		FCBDB257E67F769504C70963 /* Pods-AnimationDesktop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationDesktop.release.xcconfig"; path = "Target Support Files/Pods-AnimationDesktop/Pods-AnimationDesktop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AC5C0BEBC641EC554EA51E6 /* Pods_AnimationDesktop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +48,8 @@
 			children = (
 				044BD75E26E8E61C0004E92E /* AnimationDesktop */,
 				044BD75D26E8E61C0004E92E /* Products */,
+				E4DFD1B4AD4EBAFDEEA70AD1 /* Pods */,
+				17E4A471BA455F58D061E035 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +84,24 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		17E4A471BA455F58D061E035 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89CDA7D0398803E63F80A318 /* Pods_AnimationDesktop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4DFD1B4AD4EBAFDEEA70AD1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A8341C43CA7F45ACA079F374 /* Pods-AnimationDesktop.debug.xcconfig */,
+				FCBDB257E67F769504C70963 /* Pods-AnimationDesktop.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -84,6 +109,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 044BD76C26E8E61D0004E92E /* Build configuration list for PBXNativeTarget "AnimationDesktop" */;
 			buildPhases = (
+				AF8178B51FCE74318F31135D /* [CP] Check Pods Manifest.lock */,
 				044BD75826E8E61C0004E92E /* Sources */,
 				044BD75926E8E61C0004E92E /* Frameworks */,
 				044BD75A26E8E61C0004E92E /* Resources */,
@@ -141,6 +167,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AF8178B51FCE74318F31135D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnimationDesktop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		044BD75826E8E61C0004E92E /* Sources */ = {
@@ -285,6 +336,7 @@
 		};
 		044BD76D26E8E61D0004E92E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8341C43CA7F45ACA079F374 /* Pods-AnimationDesktop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -307,6 +359,7 @@
 		};
 		044BD76E26E8E61D0004E92E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCBDB257E67F769504C70963 /* Pods-AnimationDesktop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

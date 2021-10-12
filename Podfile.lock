@@ -1,0 +1,51 @@
+PODS:
+  - libffmpeg-macos (4.4):
+    - libffmpeg-macos/libavcodec (= 4.4)
+    - libffmpeg-macos/libavdevice (= 4.4)
+    - libffmpeg-macos/libavfilter (= 4.4)
+    - libffmpeg-macos/libavformat (= 4.4)
+    - libffmpeg-macos/libavutil (= 4.4)
+    - libffmpeg-macos/libswresample (= 4.4)
+    - libffmpeg-macos/libswscale (= 4.4)
+    - libopenssl
+  - libffmpeg-macos/libavcodec (4.4):
+    - libopenssl
+  - libffmpeg-macos/libavdevice (4.4):
+    - libopenssl
+  - libffmpeg-macos/libavfilter (4.4):
+    - libopenssl
+  - libffmpeg-macos/libavformat (4.4):
+    - libopenssl
+  - libffmpeg-macos/libavutil (4.4):
+    - libopenssl
+  - libffmpeg-macos/libswresample (4.4):
+    - libopenssl
+  - libffmpeg-macos/libswscale (4.4):
+    - libopenssl
+  - libopenssl (1.1.1l)
+
+DEPENDENCIES:
+  - libffmpeg-macos (from `https://github.com/limitLiu/libffmpeg-macos.git`)
+  - libopenssl (from `https://github.com/limitLiu/libopenssl.git`)
+
+EXTERNAL SOURCES:
+  libffmpeg-macos:
+    :git: https://github.com/limitLiu/libffmpeg-macos.git
+  libopenssl:
+    :git: https://github.com/limitLiu/libopenssl.git
+
+CHECKOUT OPTIONS:
+  libffmpeg-macos:
+    :commit: a0c236fa9935386ac9f3095806d2ff8cfd3d69b1
+    :git: https://github.com/limitLiu/libffmpeg-macos.git
+  libopenssl:
+    :commit: e1737c65f443384bfc7c9ae3c9575ff7de9acaee
+    :git: https://github.com/limitLiu/libopenssl.git
+
+SPEC CHECKSUMS:
+  libffmpeg-macos: 29957f5208435b891bb5e264e8040da9e00281dd
+  libopenssl: 04ff04b75a5cdb8dd4e99f7be553c025fabbcb3b
+
+PODFILE CHECKSUM: 1bd67900ed7f257fab749c9732e632f9ab1f2bf0
+
+COCOAPODS: 1.11.2
