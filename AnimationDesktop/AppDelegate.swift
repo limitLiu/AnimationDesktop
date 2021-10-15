@@ -9,6 +9,7 @@ import Cocoa
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
+  let notification = NSUserNotification()
   let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
   
   func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -27,13 +28,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     if animatedDesktop.path != nil {
       animatedDesktop.run()
     } else {
-      // TODO 没有选择文件时弹出警告
+      notification.identifier = "alert"
+      notification.actionButtonTitle = "I got it!"
+      notification.informativeText = "Plz select a video file!"
+      notification.soundName = NSUserNotificationDefaultSoundName
+      NSUserNotificationCenter.default.deliver(notification)
     }
   }
   
   @objc func selectFile() {
-    // TODO 动态设置文件
-    AnimatedDesktop.shared.path = "/Users/mac/Movies/Animation Wallpaper/12.28.mp4"
+    let panel = NSOpenPanel()
+    panel.directoryURL = URL(string: "\(NSHomeDirectory())/Movies")
+    panel.allowsMultipleSelection = false
+    panel.allowedFileTypes = ["mp4"]
+    if panel.runModal() == NSApplication.ModalResponse.OK {
+      let path = panel.url?.path
+      UserDefaults.standard.set(path, forKey: "path")
+      AnimatedDesktop.shared.path = path
+    }
   }
   
   private func constructMenu() {
